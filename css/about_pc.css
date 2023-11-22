@@ -198,7 +198,7 @@ main {
 }
 
 
-/* myself
+/* about
 --------------------------------------- */
 #about-area {
   width: 100%;
@@ -420,82 +420,6 @@ main {
   font-weight: normal;
   line-height: normal;
   padding-bottom: 20px;
-}
-
-
-/* next works
---------------------------------------- */
-#works_link {
-  width: 100%;
-}
-
-.next-content {
-  display: block;
-  margin-top: 180px;
-  width: auto;
-  height: 600px;
-  background: #000;
-}
-
-.next-content .inner {
-  height: inherit;
-}
-
-.next-content .inner a {
-  display: flex;
-  padding-inline: 120px;
-  align-items: center;
-  height: inherit;
-}
-
-.next-content a>h2::before {
-  content: "Next";
-  display: block;
-  color: #F9F5F1;
-  font-family: Gelasio;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-
-.next-content a>h2 {
-  position: relative;
-  display: block;
-  color: #F9F5F1;
-  font-family: Gelasio;
-  font-size: 60px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-
-
-/* hover op */
-.w-hover-op {
-  position: relative;  
-}
-
-.w-hover-op h2::after {
-  content: '';
-  position: absolute;
-  top: 100%;
-  bottom: 0;
-  left: 0;
-  width: 0%;
-  height: 1px;
-  background:#f9f9f1;
-  transition: all .5s;
-  transform: scale(0, 1);
-  transform-origin: left top;
-}
-
-.w-hover-op h2::after {
-  transform: scale(1, 1);
-}
-
-.w-hover-op:hover h2::after{
-  width: 120%;
 }
 
 
