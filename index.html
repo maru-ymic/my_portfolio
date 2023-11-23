@@ -17,7 +17,7 @@
     <!-- css -->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="css/about_pc.css" media="print,screen  and (min-width:768px)">
-    <link rel="stylesheet" href="css/sp.css" media="all and (max-width: 767px)">
+    <link rel="stylesheet" href="css/about_sp.css" media="all and (max-width: 767px)">
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
     <script src="js/works.js" defer></script>
@@ -30,7 +30,8 @@
           <!-- ロゴ -->
           <div class="header_inner">
             <a href="" class="header_logo">
-              <img src="images/header_mv/my_logo_b.png" alt="yoheiアイコン">
+              <img src="images/header_mv/my_logo_b.png" alt="yoheiアイコン" class="blue">
+              <img src="images/header_mv/my_logo_y.png" alt="yoheiアイコン" class="yellow">
             </a>
             <!-- pc nav -->
             <ul class="header_inner_list">
@@ -48,6 +49,37 @@
               </li>
             </ul>
             <!-- pc nav -->
+
+            <!-- sp nav -->
+            <div class="sp-nav">
+              <!-- ハンバーガーメニュー -->
+              <button id="js-humberger" type="button" class="humberger" aria-controls="navigation" aria-expanded="false">
+                <span class="humberger__line"></span>
+              </button>
+              <!-- ハンバーガーメニュー -->
+
+              <!-- 中身 -->
+              <div class="header__nav-area js-nav-area" id="navigation">
+                <nav id="js-global-navigation" class="global-navigation">
+                  <ul class="global-navigation__list">
+                    <li>
+                      <a href="">About</a>
+                    </li>
+                    <li>
+                      <a href="">Works</a>
+                    </li>
+                    <li>
+                      <a href="">Photography</a>
+                    </li>
+                    <li>
+                      <a href="">Contact</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <!-- 中身 -->
+            </div>
+            <!-- sp nav -->
           </div>
           <!-- ロゴ -->
         </div>

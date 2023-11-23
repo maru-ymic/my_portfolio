@@ -213,7 +213,7 @@ main {
 .works-column {
   display: flex;
   justify-content: center;
-  gap: 79px;
+  gap: 77px;
   flex-wrap: wrap;
 }
 
@@ -240,84 +240,8 @@ main {
   padding-top: 10px;
 }
 
-.works01 a img {
+.works-column li>button>img {
   border: 1px solid #D9D9D9;
-}
-
-
-/* next photography
---------------------------------------- */
-#photography_link {
-  width: 100%;
-}
-
-.next-content {
-  display: block;
-  margin-top: 180px;
-  width: auto;
-  height: 600px;
-  background: #000;
-}
-
-.next-content .inner {
-  height: inherit;
-}
-
-.next-content .inner a {
-  display: flex;
-  padding-inline: 120px;
-  align-items: center;
-  height: inherit;
-}
-
-.next-content a>h2::before {
-  content: "Next";
-  display: block;
-  color: #F9F5F1;
-  font-family: Gelasio;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-
-.next-content a>h2 {
-  position: relative;
-  display: block;
-  color: #F9F5F1;
-  font-family: Gelasio;
-  font-size: 60px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-
-
-/* hover op */
-.p-hover-op {
-  position: relative;  
-}
-
-.p-hover-op h2::after {
-  content: '';
-  position: absolute;
-  top: 100%;
-  bottom: 0;
-  left: 0;
-  width: 0%;
-  height: 1px;
-  background:#f9f9f1;
-  transition: all .5s;
-  transform: scale(0, 1);
-  transform-origin: left top;
-}
-
-.p-hover-op h2::after {
-  transform: scale(1, 1);
-}
-
-.p-hover-op:hover h2::after{
-  width: 120%;
 }
 
 
@@ -409,10 +333,6 @@ main {
 /* モーダル　
 --------------------------------------- */
 
-/* .modal-button{
-  padding: 10px;
-} */
-
 .modal{
   z-index: 500;
   opacity: 0;
@@ -424,10 +344,9 @@ main {
   margin: auto;
   width: 50%;
   height: 99%;
-  background: #F9F5F1;
+  background: #f9f9f1;
   pointer-events: none;
   transition: all 300ms ease 0ms;
-  /* display: block; */
   box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.8);
 }
 
@@ -447,9 +366,6 @@ main {
 }
 
 .modal-inner{
-  /* padding: 60px 0; */
-  /* width: 800px; */
-  /* margin-inline:auto; */
   height: 94vh;
   overflow-y: scroll;
   margin: 10px auto;
@@ -458,7 +374,6 @@ main {
 }
 
 .modal-inner h2 {
-  /* position: absolute; */
   color: #323232;
   text-align: center;
   font-family: Zen Maru Gothic;
@@ -471,14 +386,12 @@ main {
 
 .pop_text {
   text-align: left;
-  /* position: absolute; */
   margin-top: 50px;
   padding: 0 30px;
 }
 
 .pop_text li {
   margin-top: 26px;
-  /* display: inline-block; */
 }
 
 .pop_text li .pop_text_in {
@@ -497,28 +410,10 @@ main {
 .pop_text li a {
   color: #323232;
   text-decoration: underline;
-  /* font-style: italic;  */
 }
 
 .pop_text_in a {
   display: inline;
-}
-
-
-/* 閉じるボタン */
-.btn-close {
-  background: #333;
-  color: #fff;
-  padding: 10px;
-  cursor: pointer;
-  margin: 10px auto;
-  width: 95%;
-  text-align: center;
-}
-
-.btn-close:hover {
-  position: absolute;
-  opacity: 0.8;
 }
 
 
@@ -537,9 +432,47 @@ main {
   padding-left: 0;
 }
 
+.pc_desgin {
+  width: 100%;
+  height: 0;
+  margin-top: 50px;
+  padding-top: 268%;
+  background: url(../images/career_works/portfolio/PC_portfolio.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.sp_desgin {
+  display: flex;
+  width: 88%;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.sp_desgin_l {
+  width: 100%;
+  height: 0;
+  padding-top: 284%;
+  background: url(../images/career_works/portfolio/sp-1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.sp_desgin_r {
+  width: 100%;
+  height: 0;
+  padding-top: 207%;
+  background: url(../images/career_works/portfolio/sp-2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
 /* 木材サイト */
 .mokuzai h2::after {
-  content: "（企業実習）";
+  content: "（企業実習先の案件）";
   display: block;
   color: #323232;
   text-align: center;
@@ -550,11 +483,9 @@ main {
   line-height: 1;
   padding-top: 10px;
   padding-left: 0;
-  /* position: absolute; */
 }
 
 .pc_mokuzai {
-  /* position: absolute; */
   width: 100%;
   height: 0;
   margin-top: 50px;
@@ -613,6 +544,103 @@ main {
   margin-top: 50px;
   padding-top: 218%;
   background: url(../images/career_works/marina/PC.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* 化粧品バナー */
+.bnr h2::after {
+  content: "（職業訓練校 課題）";
+  display: block;
+  color: #323232;
+  text-align: center;
+  font-family: Zen Maru Gothic;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  padding-top: 10px;
+  padding-left: 0;
+}
+
+.bnr0 {
+  width: 100%;
+  height: 0;
+  margin-top: 50px;
+  padding-top: 45%;
+  background: url(../images/career_works/bnr1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* サマーセールのバナー */
+.bnr1 {
+  width: 100%;
+  height: 0;
+  margin-top: 50px;
+  padding-top: 45%;
+  background: url(../images/career_works/bnr2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* map */
+.map {
+  width: 100%;
+  height: 0;
+  margin-top: 50px;
+  padding-top: 45%;
+  background: url(../images/career_works/map1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* logo1 */
+.logo1 {
+  width: 100%;
+  height: 0;
+  margin-top: 50px;
+  padding-top: 45%;
+  background: url(../images/career_works/logo1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* logo2/3 */
+.logo2 {
+  width: 100%;
+  height: 0;
+  margin-top: 50px;
+  padding-top: 45%;
+  background: url(../images/career_works/logo2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.logo3 {
+  width: 100%;
+  height: 0;
+  margin-top: 50px;
+  padding-top: 45%;
+  background: url(../images/career_works/logo3.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* Pixel Art */
+.art {
+  width: 100%;
+  height: 0;
+  margin-top: 50px;
+  padding-top: 45%;
+  background: url(../images/career_works/pixel.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
