@@ -1,0 +1,576 @@
+@charset "UTF-8";
+
+/* ベース
+--------------------------------------- */
+html,
+body,
+div,
+header {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  letter-spacing: 2.2px;
+}
+
+html,
+body {
+  font-size: calc( ( 100 / 750 ) * 26 * 1vw);
+  max-width: 767px;
+}
+
+body {
+  color: #323232;
+  background-color: #f9f9f1;
+  font-family: 'Gelasio', 'Zen Maru Gothic', serif;
+  line-height: 1.7;
+}
+
+ul>li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  width: 100%;
+}
+
+.wrapper {
+  display: block;
+  max-width: 767px;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+.inner {
+  width: 100%;
+  margin-inline: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ヘッダー
+--------------------------------------- */
+.header {
+  display: block;
+  width: auto;
+  z-index: 1000;
+  padding: calc( ( 100 / 750 ) * 30 * 1vw) calc( ( 100 / 750 ) * 44 * 1vw);
+  top: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+
+.header.change-color {
+  background-color: #F9F5F1;
+  transition: 0.3s;
+}
+
+.header_inner {
+  display: block;
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.blue {
+  display: none;
+}
+
+.yellow {
+  display: block;
+  width: calc( ( 100 / 750 ) * 230 * 1vw);
+  background: transparent;
+}
+
+/* pc nav */
+.header_inner_list {
+  display: none;
+}
+
+.header__nav-area li {
+  display: none;
+}
+
+/* SPナビ */
+.sp-nav {
+  display: block;
+  width: auto;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+}
+
+.hamberger {
+  position: relative;
+  right: 0;
+  display: block;
+  width: calc( ( 100 / 750 ) * 100 * 1vw);
+  height: calc( ( 100 / 750 ) * 4 * 1vw);
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  background-color: transparent;
+  margin: 0 0 0 auto;
+  align-items: center;
+}
+
+.hamberger.-active .hamberger__line {
+  background-color: transparent;
+}
+
+.hamberger.-active .hamberger__line::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.hamberger.-active .hamberger__line::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.hamberger.-active .hamberger__text::before {
+  content: '閉じる';
+}
+
+.hamberger__line {
+  display: block;
+  height: calc( ( 100 / 750 ) * 4 * 1vw);
+  position: absolute;
+  width: 100%;
+  background-color: #452F21;
+  transition: 0.4s;
+}
+
+.hamberger__line:before,
+.hamberger__line:after {
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  background-color: #452F21;
+  transition: inherit;
+}
+
+.hamberger__line:before {
+  top: calc( ( 100 / 750 ) * 26 * -1vw);
+}
+
+.hamberger__line:after {
+  top: calc( ( 100 / 750 ) * 26 * 1vw);
+}
+
+
+/* mv
+--------------------------------------- */
+.mainVisual {
+  display: block;
+}
+
+.mainVisual .inner{
+  position: relative;
+}
+
+.wrapper .mainVisual #mv_back {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("../images/header_mv/about_mv.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right 20% center;
+}
+
+.mv_wrapper {
+  display: block;
+  z-index: 1;
+  position: absolute;
+  top: 54%;
+  transform: translateX(10%);
+  margin: 0 auto;
+}
+
+.mv_wrapper_left {
+  display: block;
+  width: auto;
+}
+
+.mv_wrapper_left .name {
+  display: block;
+  color: #F9F5F1;
+  font-family: Gelasio;
+  font-size: calc( ( 100 / 750 ) * 60 * 1vw);
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.mv_wrapper_left h3 {
+  display: block;
+  color: #F9F5F1;
+  font-family: Zen Maru Gothic;
+  font-size: calc( ( 100 / 750 ) * 36 * 1vw);
+}
+
+.name_bottom {
+  display: none;
+}
+
+.name_bottom_r {
+  display: block;
+  position: absolute;
+  right: 25px;
+  bottom: 115px;
+}
+
+.name_bottom_r h2 {
+  display: block;
+  color: #F9F5F1;
+  text-align: right;
+  font-family: Gelasio;
+  font-size: calc( ( 100 / 750 ) * 48 * 1vw);
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+/* myself
+--------------------------------------- */
+#about-area {
+  width: 100%;
+}
+
+.about-content {
+  display: block;
+  /* margin-top: 30px; */
+  width: auto;
+  /* background: #f3faf291; */
+  padding-top: calc( ( 100 / 750 ) * 180 * 1vw);
+  padding-bottom: calc( ( 100 / 750 ) * 90 * 1vw);
+}
+
+#about-area .inner {
+  height: inherit;
+  padding: 0 calc( ( 100 / 750 ) * 45 * 1vw);
+}
+
+.about-content h2 {
+  text-align: center;
+  color: #323232;
+  font-family: Gelasio;
+  font-size: calc( ( 100 / 750 ) * 60 * 1vw);
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.about-content h2::after {
+  content: "自己紹介";
+  color: #9f9e9e;
+  font-family: Zen Maru Gothic;
+  font-size: calc( ( 100 / 750 ) * 30 * 1vw);
+  font-weight: normal;
+  padding-left: calc( ( 100 / 750 ) * 30 * 1vw);
+}
+
+.about-content p {
+  color: #323232;
+  font-family: Zen Maru Gothic;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 2;
+  padding-top: calc( ( 100 / 750 ) * 100 * 1vw);
+  letter-spacing: 2.5px;
+}
+
+/* career
+--------------------------------------- */
+#career-area {
+  width: 100%;
+}
+
+.career-content {
+  display: block;
+  width: auto;
+  background: #f3faf291;
+  padding-top: calc( ( 100 / 750 ) * 90 * 1vw);
+  padding-bottom: calc( ( 100 / 750 ) * 90 * 1vw);
+}
+
+#career-area .inner {
+  height: inherit;
+}
+
+.career-content-area {
+  width: 100%;
+  display: flex;
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  flex-wrap: wrap;
+  /* padding: 70px 120px 0; */
+}
+
+.career-content h2 {
+  text-align: center;
+  color: #323232;
+  font-family: Gelasio;
+  font-size: calc( ( 100 / 750 ) * 60 * 1vw);
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.career-content h2::after {
+  content: "職歴";
+  color: #9f9e9e;
+  font-family: Zen Maru Gothic;
+  font-size: calc( ( 100 / 750 ) * 30 * 1vw);
+  font-weight: normal;
+  padding-left: calc( ( 100 / 750 ) * 30 * 1vw);
+}
+
+.career-content_left {
+  display: block;
+  width: 100%;
+  /* height: ; */
+  aspect-ratio: 1 / 1;
+  background: url("../images/career_works/career_road.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin-top: calc( ( 100 / 750 ) * 100 * 1vw);
+  margin-bottom: calc( ( 100 / 750 ) * 100 * 1vw);
+}
+
+.career-content_right {
+  padding: 0 calc( ( 100 / 750 ) * 45 * 1vw);
+}
+
+.career-content_right ul>li {
+  display: flex;
+  gap: calc( ( 100 / 750 ) * 70 * 1vw);
+  margin-bottom: calc( ( 100 / 750 ) * 60 * 1vw);
+}
+
+.career-content_right ul>li:last-child {
+  display: flex;
+  gap: calc( ( 100 / 750 ) * 70 * 1vw);
+  margin-bottom: 0;
+}
+
+.career-content_right .wrapper_left {
+  color: #323232;
+  text-align: center;
+  font-family: Gelasio;
+  font-size: calc( ( 100 / 750 ) * 30 * 1vw);
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.career-content_right .wrapper_right {
+  color: #323232;
+  font-family: Zen Maru Gothic;
+  font-size: calc( ( 100 / 750 ) * 26 * 1vw);
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+}
+
+
+/* skill
+--------------------------------------- */
+#skill-area {
+  width: auto;
+}
+
+.skill-content {
+  margin-top: calc( ( 100 / 750 ) * 90 * 1vw);
+  width: 100%;
+}
+
+.skill-content h2 {
+  text-align: center;
+  color: #323232;
+  font-family: Gelasio;
+  font-size: calc( ( 100 / 750 ) * 60 * 1vw);
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.skill-content h2::after {
+  content: "スキル一覧";
+  color: #9f9e9e;
+  font-family: Zen Maru Gothic;
+  font-size: calc( ( 100 / 750 ) * 30 * 1vw);
+  font-weight: normal;
+  padding-left: calc( ( 100 / 750 ) * 30 * 1vw);
+}
+
+.skill-content-main {
+  width: 100%;
+  /* display: flex; */
+  gap: 40px;
+  padding: calc( ( 100 / 750 ) * 100 * 1vw) calc( ( 100 / 750 ) * 45 * 1vw) 0;
+}
+
+.skill-content_right {
+  padding-top: calc( ( 100 / 750 ) * 100 * 1vw);
+}
+
+.skill-cnt {
+  width: auto;
+  display: flex;
+  padding-bottom: calc( ( 100 / 750 ) * 100 * 1vw);
+  gap: calc( ( 100 / 750 ) * 30 * 1vw);
+}
+
+.skill-cnt:last-child {
+  width: auto;
+  display: flex;
+  padding-bottom: 0;
+  gap: calc( ( 100 / 750 ) * 30 * 1vw);
+}
+
+.skill-cnt img {
+  width: calc( ( 100 / 750 ) * 150 * 1vw);
+  height: auto;
+}
+
+.skill-content-wrapper h3 {
+  padding: 0 0 calc( ( 100 / 750 ) * 20 * 1vw) 0;
+}
+
+
+.skill-content-wrapper h3,
+.skill-content-wrapper .level {
+  color: #323232;
+  font-family: Gelasio;
+  font-size: calc( ( 100 / 750 ) * 26 * 1vw);
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.skill-content-wrapper .txt {
+  height: 90px;
+  color: #323232;
+  font-family: Zen Maru Gothic;
+  font-size: calc( ( 100 / 750 ) * 26 * 1vw);
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  padding-bottom: calc( ( 100 / 750 ) * 30 * 1vw);
+}
+
+/* footer
+--------------------------------------- */
+#footer {
+  width: auto;
+  margin-top: calc( ( 100 / 750 ) * 180 * 1vw);
+  background: #D9D9D9;
+}
+
+.footer-area {
+  height: calc( ( 100 / 750 ) * 150 * 1vw);
+}
+
+.f-inner {
+  display: none;
+}
+
+.fNavi {
+  display: none;
+}
+
+.copy_pc {
+  display: none;
+}
+
+.copy_sp {
+  display: block;
+  color: #323232;
+  text-align: center;
+  font-family: Gelasio;
+  font-size: calc( ( 100 / 750 ) * 26 * 1vw);
+  font-style: normal;
+  font-weight: normal;
+  line-height: calc( ( 100 / 750 ) * 158 * 1vw);
+}
+
+
+/* hover op */
+.hover-op,
+.hover-ops {
+  position: relative;
+}
+
+.hover-op:hover,
+.hover-ops:hover {
+  color: #9f9e9e
+}
+
+.hover-op::after {
+  content: '';
+  position: absolute;
+  top: 30px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background:#323232;
+  transition: all .5s;
+  transform: scale(0, 1);
+  transform-origin: left top;
+}
+
+.hover-op:hover::after,
+.hover-ops:hover::after {
+  transform: scale(1, 1);
+}
+
+
+/*　上に上がる動き　*/
+
+.header.UpMove{
+  animation: UpAnime 0.5s forwards;
+}
+
+@keyframes UpAnime{
+  from {
+    opacity: 1;
+  transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+  transform: translateY(-100px);
+  }
+}
+
+/*　下に下がる動き　*/
+
+.header.DownMove{
+  animation: DownAnime 0.5s forwards;
+}
+@keyframes DownAnime{
+  from {
+    opacity: 0;
+  transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
+}
