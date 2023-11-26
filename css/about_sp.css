@@ -42,13 +42,11 @@ main {
 
 .wrapper {
   display: block;
-
   max-width: 767px;
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
   overflow-x: auto;
-  box-sizing: border-box;
 }
 
 .inner {
@@ -64,39 +62,35 @@ main {
 --------------------------------------- */
 .header {
   display: block;
-  width: 100%;
-  height: calc( ( 100 / 750 ) * 167 * 1vw);
+  width: auto;
   z-index: 1000;
-  padding-top: calc( ( 100 / 750 ) * 30 * 1vw);
+  padding: calc( ( 100 / 750 ) * 30 * 1vw) calc( ( 100 / 750 ) * 44 * 1vw);
   top: 0;
-  position: absolute;
+  position: fixed;
   left: 0;
-  transform: translateX(-50%);
-  line-height: 0;
+  right: 0;
+}
+
+.header.change-color {
+  background-color: #F9F5F1;
+  transition: 0.3s;
 }
 
 .header_inner {
   display: block;
-  width: 100%;
-  height: auto;
-}
-
-.header_logo a {
-  display: block;
-  position: absolute;
-  top: 30%;
-}
-
-.header_logo img {
-  display: block;
-  position: absolute;
-  left: 61%;
-  width: calc( ( 100 / 750 ) * 230 * 1vw);
-  background: transparent;
+  width: auto;
+  display: flex;
+  justify-content: space-between;
 }
 
 .blue {
   display: none;
+}
+
+.yellow {
+  display: block;
+  width: calc( ( 100 / 750 ) * 230 * 1vw);
+  background: transparent;
 }
 
 /* pc nav */
@@ -110,55 +104,56 @@ main {
 
 /* SPナビ */
 .sp-nav {
-  display: block
+  display: block;
+  width: auto;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
 }
 
-.humberger {
-  position: absolute;
-  z-index: 1001;
-  top: 17%;
-  right: -40%;
+.hamberger {
+  position: relative;
+  right: 0;
   display: block;
   width: calc( ( 100 / 750 ) * 100 * 1vw);
-  height: calc( ( 100 / 750 ) * 117 * 1vw);
+  height: calc( ( 100 / 750 ) * 4 * 1vw);
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
-  outline: 0;
+  background-color: transparent;
+  margin: 0 0 0 auto;
+  align-items: center;
+}
+
+.hamberger.-active .hamberger__line {
   background-color: transparent;
 }
 
-.humberger.-active .humberger__line {
-  background-color: transparent;
-}
-
-.humberger.-active .humberger__line::before {
+.hamberger.-active .hamberger__line::before {
   top: 0;
   transform: rotate(45deg);
 }
 
-.humberger.-active .humberger__line::after {
+.hamberger.-active .hamberger__line::after {
   top: 0;
   transform: rotate(-45deg);
 }
 
-.humberger.-active .humberger__text::before {
+.hamberger.-active .hamberger__text::before {
   content: '閉じる';
 }
 
-.humberger__line {
+.hamberger__line {
   display: block;
   height: calc( ( 100 / 750 ) * 4 * 1vw);
   position: absolute;
-  top: 27px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: calc((100 / 750) * 88 * 1vw);
+  width: 100%;
   background-color: #452F21;
   transition: 0.4s;
 }
 
-.humberger__line:before,
-.humberger__line:after {
+.hamberger__line:before,
+.hamberger__line:after {
   content: "";
   display: block;
   height: 100%;
@@ -168,12 +163,12 @@ main {
   transition: inherit;
 }
 
-.humberger__line:before {
-  top: calc( ( 100 / 750 ) * 18 * -1vw);
+.hamberger__line:before {
+  top: calc( ( 100 / 750 ) * 26 * -1vw);
 }
 
-.humberger__line:after {
-  top: calc( ( 100 / 750 ) * 18 * 1vw);
+.hamberger__line:after {
+  top: calc( ( 100 / 750 ) * 26 * 1vw);
 }
 
 
@@ -181,7 +176,6 @@ main {
 --------------------------------------- */
 .mainVisual {
   display: block;
-  /* width: auto; */
 }
 
 .mainVisual .inner{
@@ -202,8 +196,7 @@ main {
   z-index: 1;
   position: absolute;
   top: 54%;
-  transform: translateX(20%);
-  /* padding: 0 120px; */
+  transform: translateX(10%);
   margin: 0 auto;
 }
 
@@ -229,27 +222,6 @@ main {
   font-size: calc( ( 100 / 750 ) * 36 * 1vw);
 }
 
-.name_bottom_un {
-  display: block;
-  color: #323232;
-  font-family: Gelasio;
-  font-size: calc( ( 100 / 750 ) * 26 * 1vw);
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  padding-top: calc( ( 100 / 750 ) * 100 * 1vw);
-}
-
-.name_bottom_un span {
-  display: block;
-  color: #F9F5F1;
-  font-family: Gelasio;
-  font-size: calc( ( 100 / 750 ) * 26 * 1vw);
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-
 .name_bottom {
   display: none;
 }
@@ -257,7 +229,7 @@ main {
 .name_bottom_r {
   display: block;
   position: absolute;
-  right: 43px;
+  right: 25px;
   bottom: 115px;
 }
 
@@ -266,15 +238,10 @@ main {
   color: #F9F5F1;
   text-align: right;
   font-family: Gelasio;
-  font-size: calc( ( 100 / 750 ) * 40 * 1vw);
+  font-size: calc( ( 100 / 750 ) * 48 * 1vw);
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-}
-
-
-#container {
-  display: none;
 }
 
 /* myself
@@ -285,23 +252,23 @@ main {
 
 .about-content {
   display: block;
-  margin-top: 30px;
+  /* margin-top: 30px; */
   width: auto;
-  background: #f3faf291;
-  padding-top: 150px;
-  padding-bottom: 30px;
+  /* background: #f3faf291; */
+  padding-top: calc( ( 100 / 750 ) * 180 * 1vw);
+  padding-bottom: calc( ( 100 / 750 ) * 90 * 1vw);
 }
 
 #about-area .inner {
   height: inherit;
-  padding: 0 120px;
+  padding: 0 calc( ( 100 / 750 ) * 45 * 1vw);
 }
 
 .about-content h2 {
-  text-align: left;
+  text-align: center;
   color: #323232;
   font-family: Gelasio;
-  font-size: 60px;
+  font-size: calc( ( 100 / 750 ) * 60 * 1vw);
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -311,9 +278,9 @@ main {
   content: "自己紹介";
   color: #9f9e9e;
   font-family: Zen Maru Gothic;
-  font-size: 24px;
+  font-size: calc( ( 100 / 750 ) * 30 * 1vw);
   font-weight: normal;
-  padding-left: 30px;
+  padding-left: calc( ( 100 / 750 ) * 30 * 1vw);
 }
 
 .about-content p {
@@ -323,7 +290,7 @@ main {
   font-style: normal;
   font-weight: normal;
   line-height: 2;
-  padding-top: 70px;
+  padding-top: calc( ( 100 / 750 ) * 100 * 1vw);
   letter-spacing: 2.5px;
 }
 
@@ -337,8 +304,8 @@ main {
   display: block;
   width: auto;
   background: #f3faf291;
-  padding-top: 150px;
-  padding-bottom: 30px;
+  padding-top: calc( ( 100 / 750 ) * 90 * 1vw);
+  padding-bottom: calc( ( 100 / 750 ) * 90 * 1vw);
 }
 
 #career-area .inner {
@@ -348,16 +315,17 @@ main {
 .career-content-area {
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 70px 120px 0;
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  flex-wrap: wrap;
+  /* padding: 70px 120px 0; */
 }
 
 .career-content h2 {
   text-align: center;
   color: #323232;
   font-family: Gelasio;
-  font-size: 60px;
+  font-size: calc( ( 100 / 750 ) * 60 * 1vw);
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -367,29 +335,37 @@ main {
   content: "職歴";
   color: #9f9e9e;
   font-family: Zen Maru Gothic;
-  font-size: 24px;
+  font-size: calc( ( 100 / 750 ) * 30 * 1vw);
   font-weight: normal;
-  padding-left: 30px;
+  padding-left: calc( ( 100 / 750 ) * 30 * 1vw);
 }
 
 .career-content_left {
   display: block;
-  width: 447px;
-  height: 550px;
+  width: 100%;
+  /* height: ; */
+  aspect-ratio: 1 / 1;
   background: url("../images/career_works/career_road.png");
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: center;
+  margin-top: calc( ( 100 / 750 ) * 100 * 1vw);
+  margin-bottom: calc( ( 100 / 750 ) * 100 * 1vw);
+}
+
+.career-content_right {
+  padding: 0 calc( ( 100 / 750 ) * 45 * 1vw);
 }
 
 .career-content_right ul>li {
   display: flex;
-  gap: 50px;
-  margin-bottom: 70px;
+  gap: calc( ( 100 / 750 ) * 70 * 1vw);
+  margin-bottom: calc( ( 100 / 750 ) * 60 * 1vw);
 }
 
 .career-content_right ul>li:last-child {
   display: flex;
-  gap: 50px;
+  gap: calc( ( 100 / 750 ) * 70 * 1vw);
   margin-bottom: 0;
 }
 
@@ -397,7 +373,7 @@ main {
   color: #323232;
   text-align: center;
   font-family: Gelasio;
-  font-size: 20px;
+  font-size: calc( ( 100 / 750 ) * 30 * 1vw);
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -406,7 +382,7 @@ main {
 .career-content_right .wrapper_right {
   color: #323232;
   font-family: Zen Maru Gothic;
-  font-size: 16px;
+  font-size: calc( ( 100 / 750 ) * 26 * 1vw);
   font-style: normal;
   font-weight: normal;
   line-height: normal;
@@ -420,7 +396,7 @@ main {
 }
 
 .skill-content {
-  margin-top: 150px;
+  margin-top: calc( ( 100 / 750 ) * 90 * 1vw);
   width: 100%;
 }
 
@@ -428,7 +404,7 @@ main {
   text-align: center;
   color: #323232;
   font-family: Gelasio;
-  font-size: 60px;
+  font-size: calc( ( 100 / 750 ) * 60 * 1vw);
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -438,44 +414,43 @@ main {
   content: "スキル一覧";
   color: #9f9e9e;
   font-family: Zen Maru Gothic;
-  font-size: 24px;
+  font-size: calc( ( 100 / 750 ) * 30 * 1vw);
   font-weight: normal;
-  padding-left: 30px;
+  padding-left: calc( ( 100 / 750 ) * 30 * 1vw);
 }
 
 .skill-content-main {
   width: 100%;
-  display: flex;
+  /* display: flex; */
   gap: 40px;
-  padding: 70px 120px 0;
+  padding: calc( ( 100 / 750 ) * 100 * 1vw) calc( ( 100 / 750 ) * 45 * 1vw) 0;
 }
 
-.skill-content_left,
 .skill-content_right {
-  width: 50%;
+  padding-top: calc( ( 100 / 750 ) * 100 * 1vw);
 }
 
 .skill-cnt {
   width: auto;
   display: flex;
-  padding-bottom: 70px;
-  gap: 30px;
+  padding-bottom: calc( ( 100 / 750 ) * 100 * 1vw);
+  gap: calc( ( 100 / 750 ) * 30 * 1vw);
 }
 
 .skill-cnt:last-child {
   width: auto;
   display: flex;
   padding-bottom: 0;
-  gap: 30px;
+  gap: calc( ( 100 / 750 ) * 30 * 1vw);
 }
 
 .skill-cnt img {
-  width: 100px;
+  width: calc( ( 100 / 750 ) * 150 * 1vw);
   height: auto;
 }
 
 .skill-content-wrapper h3 {
-  padding: 10px 0 20px 0;
+  padding: 0 0 calc( ( 100 / 750 ) * 20 * 1vw) 0;
 }
 
 
@@ -483,7 +458,7 @@ main {
 .skill-content-wrapper .level {
   color: #323232;
   font-family: Gelasio;
-  font-size: 16px;
+  font-size: calc( ( 100 / 750 ) * 26 * 1vw);
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -493,65 +468,46 @@ main {
   height: 90px;
   color: #323232;
   font-family: Zen Maru Gothic;
-  font-size: 16px;
+  font-size: calc( ( 100 / 750 ) * 26 * 1vw);
   font-style: normal;
   font-weight: normal;
   line-height: normal;
-  padding-bottom: 20px;
+  padding-bottom: calc( ( 100 / 750 ) * 30 * 1vw);
 }
-
 
 /* footer
 --------------------------------------- */
 #footer {
   width: auto;
-  height: 300px;
-  margin-top: 180px;
+  margin-top: calc( ( 100 / 750 ) * 180 * 1vw);
+  background: #D9D9D9;
 }
 
 .footer-area {
-  height: 300px;
-  background: #D9D9D9;
+  height: calc( ( 100 / 750 ) * 150 * 1vw);
 }
 
 .f-inner {
-  width: 100%;
-  background: #D9D9D9;
-  padding: 100px 120px;
+  display: none;
 }
 
-.fNavi nav>ul {
-  display: flex;
-  justify-content: center;
-  gap: 80px;
+.fNavi {
+  display: none;
 }
 
-
-.fNavi-item a {
-  color: #323232;
-  text-align: center;
-  font-family: Gelasio;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  padding-right: 80px;
+.copy_pc {
+  display: none;
 }
 
-.fNavi-item a:last-child {
-  padding-right: 0;
-}
-
-
-.copy {
+.copy_sp {
   display: block;
   color: #323232;
   text-align: center;
   font-family: Gelasio;
-  font-size: 16px;
+  font-size: calc( ( 100 / 750 ) * 26 * 1vw);
   font-style: normal;
   font-weight: normal;
-  line-height: normal;
+  line-height: calc( ( 100 / 750 ) * 158 * 1vw);
 }
 
 
@@ -585,3 +541,36 @@ main {
   transform: scale(1, 1);
 }
 
+
+/*　上に上がる動き　*/
+
+.header.UpMove{
+  animation: UpAnime 0.5s forwards;
+}
+
+@keyframes UpAnime{
+  from {
+    opacity: 1;
+  transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+  transform: translateY(-100px);
+  }
+}
+
+/*　下に下がる動き　*/
+
+.header.DownMove{
+  animation: DownAnime 0.5s forwards;
+}
+@keyframes DownAnime{
+  from {
+    opacity: 0;
+  transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
+}
