@@ -238,6 +238,7 @@ body.touch-menu-on .header {
   margin-top: calc( ( 100 / 750 ) * 300 * 1vw);
   width: 100%;
   background-color: #e6eff1;
+  padding-bottom: calc( ( 100 / 750 ) * 80 * 1vw);
 }
 
 .contact-content h2 {
@@ -256,7 +257,7 @@ body.touch-menu-on .header {
 .contact-form {
   position: relative;
   width: 100%;
-  min-height: 110vh;
+  min-height: 120vh;
   overflow-y: scroll;
   padding-top: 100%;
 }
