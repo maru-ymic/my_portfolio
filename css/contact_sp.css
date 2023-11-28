@@ -91,13 +91,13 @@ main {
   position: relative;
 }
 
-/* .header {
+.header {
   top: -24vw;
 }
 
 body.touch-menu-on .header {
   top: 0vw;
-} */
+}
 
 /* pc nav */
 .header_inner_list {
