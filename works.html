@@ -17,7 +17,7 @@
     <!-- css -->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="css/works_pc.css" media="print,screen  and (min-width:768px)">
-    <link rel="stylesheet" href="css/sp.css" media="all and (max-width: 767px)">
+    <link rel="stylesheet" href="css/works_sp.css" media="all and (max-width: 767px)">
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
     <script src="js/works.js" defer></script> 
@@ -48,6 +48,37 @@
               </li>
             </ul>
             <!-- pc nav -->
+
+            <!-- sp nav -->
+            <div class="sp-nav">
+              <!-- ハンバーガーメニュー -->
+              <button id="js-hamberger" type="button" class="hamberger" aria-controls="navigation" aria-expanded="false">
+                <span class="hamberger__line"></span>
+              </button>
+              <!-- ハンバーガーメニュー -->
+
+              <!-- 中身 -->
+              <div class="header__nav-area js-nav-area" id="navigation">
+                <nav id="js-global-navigation" class="global-navigation">
+                  <ul class="global-navigation__list">
+                    <li>
+                      <a href="index.html">About</a>
+                    </li>
+                    <li>
+                      <a href="works.html">Works</a>
+                    </li>
+                    <li>
+                      <a href="Photography.html">Photography</a>
+                    </li>
+                    <li>
+                      <a href="contact.html">Contact</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <!-- 中身 -->
+            </div>
+            <!-- sp nav -->
           </div>
           <!-- ロゴ -->
         </div>
@@ -127,7 +158,7 @@
                             </li>
                             <li>
                               <span>使用ツール</span>
-                              <p class="pop_text_in">
+                              <p class="pop_text_in-tool">
                                 Adobe Illustrator , Adobe Photoshop , Figma , <br>
                                 Visual Studio Code
                               </p>
@@ -209,7 +240,7 @@
                             </li>
                             <li>
                               <span>使用ツール</span>
-                              <p class="pop_text_in">
+                              <p class="pop_text_in-tool">
                                 Adobe Illustrator , Adobe Photoshop , Adobe XD , <br>
                                 Visual Studio Code
                               </p>
@@ -292,7 +323,7 @@
                             </li>
                             <li>
                               <span>使用ツール</span>
-                              <p class="pop_text_in">
+                              <p class="pop_text_in-tool">
                                 Adobe Illustrator , Adobe Photoshop , Adobe XD ,<br>
                                 Visual Studio Code
                               </p>
@@ -595,7 +626,8 @@
                 <!-- footer navi -->
               </div>
             </div>
-            <small class="copy">All Rights Reserved 2023 ©️ Yohei Mitsukawa</small>
+            <small class="copy_pc">All Rights Reserved 2023 ©️ Yohei Mitsukawa</small>
+            <small class="copy_sp">©️ 2023 Yohei Mitsukawa</small>
           </div>
         </footer>
         <!-- footer -->
