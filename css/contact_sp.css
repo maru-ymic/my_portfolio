@@ -238,7 +238,6 @@ body.touch-menu-on .header {
   margin-top: calc( ( 100 / 750 ) * 300 * 1vw);
   width: 100%;
   background-color: #e6eff1;
-  padding-bottom: calc( ( 100 / 750 ) * 200 * 1vw);
 }
 
 .contact-content h2 {
