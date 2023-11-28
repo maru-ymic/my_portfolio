@@ -108,6 +108,9 @@ main {
   transition: all .5s;
 }
 
+.sp-nav {
+  display: none;
+}
 
 /* contact
 --------------------------------------- */
@@ -140,6 +143,9 @@ main {
   text-align: center;
 }
 
+.sp_ver {
+  display: none;
+}
 
 /* footer
 --------------------------------------- */
@@ -192,6 +198,9 @@ main {
   line-height: normal;
 }
 
+.copy_sp {
+  display: none;
+}
 
 /* hover op */
 .hover-op,

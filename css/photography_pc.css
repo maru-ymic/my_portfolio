@@ -108,6 +108,9 @@ main {
   transition: all .5s;
 }
 
+.sp-nav {
+  display: none;
+}
 
 /* Photography
 --------------------------------------- */
