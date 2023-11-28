@@ -535,9 +535,6 @@ main {
   padding-bottom: calc( ( 100 / 750 ) * 30 * 1vw);
 }
 
-.skill_pc {
-  display: none;
-}
 
 /* footer
 --------------------------------------- */
