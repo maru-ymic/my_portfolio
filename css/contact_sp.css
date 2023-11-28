@@ -256,7 +256,7 @@ body.touch-menu-on .header {
 .contact-form {
   position: relative;
   width: 100%;
-  min-height: 160vh;
+  min-height: 120vh;
   overflow-y: scroll;
   padding-top: 100%;
 }
