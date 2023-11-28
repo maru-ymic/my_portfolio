@@ -257,10 +257,10 @@ body.touch-menu-on .header {
 .contact-form {
   position: relative;
   width: 100%;
-  min-height: 120vh;
+  min-height: 130vh;
   overflow-y: scroll;
   padding-top: 100%;
-  padding-bottom: calc( ( 100 / 750 ) * 80 * 1vw);
+  padding-bottom: calc( ( 100 / 750 ) * 90 * 1vw);
 }
 
 iframe {
