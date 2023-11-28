@@ -40,6 +40,7 @@ main {
 }
 
 .wrapper {
+  position: relative; 
   display: block;
 }
 
@@ -47,6 +48,7 @@ main {
   width: 1300px;
   margin-inline: auto;
 }
+
 
 /* ヘッダー
 --------------------------------------- */
@@ -257,6 +259,7 @@ main {
   letter-spacing: 2.5px;
 }
 
+
 /* career
 --------------------------------------- */
 #career-area {
@@ -408,7 +411,6 @@ main {
   padding: 10px 0 20px 0;
 }
 
-
 .skill-content-wrapper h3,
 .skill-content-wrapper .level {
   color: #323232;
@@ -434,6 +436,7 @@ main {
   display: none;
 }
 
+
 /* footer
 --------------------------------------- */
 #footer {
@@ -458,7 +461,6 @@ main {
   justify-content: center;
   gap: 80px;
 }
-
 
 .fNavi-item a {
   color: #323232;

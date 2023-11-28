@@ -21,7 +21,6 @@ body {
   max-width: 767px;
 }
 
-
 body {
   color: #323232;
   background-color: #f9f9f1;
@@ -59,6 +58,7 @@ main {
   box-sizing: border-box;
 }
 
+
 /* ヘッダー
 --------------------------------------- */
 .header {
@@ -66,15 +66,14 @@ main {
   width: auto;
   z-index: 1000;
   padding: calc( ( 100 / 750 ) * 30 * 1vw) calc( ( 100 / 750 ) * 44 * 1vw);
-  top: 0;
   position: fixed;
   left: 0;
   right: 0;
+  transition: all 0.3s linear 150ms;
 }
 
 .header.change-color {
-  background-color: #D9D9D9;
-  transition: 0.3s;
+  background-color: #f9f9f1cc;
 }
 
 .header_inner {
@@ -90,6 +89,14 @@ main {
   background: transparent;
   z-index: 9999;
   position: relative;
+}
+
+.header {
+  top: -24vw;
+}
+
+body.touch-menu-on .header {
+  top: 0vw;
 }
 
 /* pc nav */
@@ -184,13 +191,6 @@ main {
   opacity: 1;
 }
 
-/* .header__nav-area nav ul {
-  overflow: auto;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-  box-sizing: border-box;
-} */
-
 .global-navigation {
   position: fixed;
   z-index: 9998;
@@ -200,11 +200,6 @@ main {
   padding: calc( ( 100 / 750 ) * 169 * 1vw) calc( ( 100 / 750 ) * 60 * 1vw);
   transition: all 0.6s;
 }
-
-/* .global-navigation.panelactive {
-  top: 0;
-} */
-  
 
 .global-navigation__list {
   position: fixed;
@@ -232,6 +227,7 @@ main {
   text-align: center;
   font-size: calc( ( 100 / 750 ) * 50 * 1vw);
 }
+
 
 /* mv
 --------------------------------------- */
@@ -280,16 +276,15 @@ main {
   padding-top: calc( ( 100 / 750 ) * 60 * 1vw);
 }
 
-
 #gif {
-  width: 100%;
+  width: 22vw;
   height: calc( ( 100 / 750 ) * 196 * 1vw);
   background: url(../images/header_mv/binku_logo.gif);
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
-  top: 87%;
-  left: 75%;
+  bottom: -4vw;
+  left: 72%;
 }
 
 
@@ -335,13 +330,6 @@ main {
   gap: calc( ( 100 / 750 ) * 100 * 1vw);
   flex-wrap: wrap;
 }
-
-/* .works-column ul button img {
-  width: 100%;
-  max-width: 767px;
-  height: auto;
-  box-sizing: border-box;
-} */
 
 .column_txt {
   text-align: center;
@@ -409,7 +397,6 @@ main {
 
 /* モーダル　
 --------------------------------------- */
-
 .modal {
   z-index: 500;
   opacity: 0;
@@ -443,7 +430,7 @@ main {
 }
 
 .modal-inner {
-  height: 88vh;
+  height: 88svh;
   overflow-y: scroll;
   margin: calc( ( 100 / 750 ) * 100 * 1vw) auto;
   width: 100%;
@@ -719,3 +706,4 @@ main {
   background-position: center;
   background-size: contain;
 }
+

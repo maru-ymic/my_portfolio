@@ -58,6 +58,7 @@ main {
   box-sizing: border-box;
 }
 
+
 /* ヘッダー
 --------------------------------------- */
 .header {
@@ -65,15 +66,22 @@ main {
   width: auto;
   z-index: 1000;
   padding: calc( ( 100 / 750 ) * 30 * 1vw) calc( ( 100 / 750 ) * 44 * 1vw);
-  top: 0;
   position: fixed;
   left: 0;
   right: 0;
+  transition: all 0.3s linear 150ms;
+}
+
+.header {
+  top: -24vw;
+}
+
+body.touch-menu-on .header {
+  top: 0vw;
 }
 
 .header.change-color {
-  background-color: #D9D9D9;
-  transition: 0.3s;
+  background-color: #f9f9f1cc;
 }
 
 .header_inner {
@@ -122,6 +130,10 @@ main {
   margin: 0 0 0 auto;
   align-items: center;
   z-index: 9999;
+}
+
+.hamberger button:focus{
+  outline: none;
 }
 
 .hamberger.-active .hamberger__line {
@@ -187,13 +199,6 @@ main {
   opacity: 1;
 }
 
-/* .header__nav-area nav ul {
-  overflow: auto;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-  box-sizing: border-box;
-} */
-
 .global-navigation {
   position: fixed;
   z-index: 9998;
@@ -202,12 +207,7 @@ main {
   height: 100%;
   padding: calc( ( 100 / 750 ) * 169 * 1vw) calc( ( 100 / 750 ) * 60 * 1vw);
   transition: all 0.6s;
-}
-
-/* .global-navigation.panelactive {
-  top: 0;
-} */
-  
+} 
 
 .global-navigation__list {
   position: fixed;
@@ -235,7 +235,6 @@ main {
   text-align: center;
   font-size: calc( ( 100 / 750 ) * 50 * 1vw);
 }
-
 
 
 /* mv
@@ -310,6 +309,7 @@ main {
   line-height: normal;
 }
 
+
 /* about
 --------------------------------------- */
 #about-area {
@@ -357,6 +357,7 @@ main {
   padding-top: calc( ( 100 / 750 ) * 100 * 1vw);
   letter-spacing: 2.5px;
 }
+
 
 /* career
 --------------------------------------- */

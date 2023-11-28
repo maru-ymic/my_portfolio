@@ -41,12 +41,14 @@ main {
 
 .wrapper {
   display: block;
+  position: relative;
 }
 
 .inner {
   width: 1300px;
   margin-inline: auto;
 }
+
 
 /* ヘッダー
 --------------------------------------- */
@@ -112,14 +114,18 @@ main {
   display: none;
 }
 
+
 /* Photography
 --------------------------------------- */
+#container {
+  padding-top: 146px;
+}
+
 #photo-area {
   width: auto;
 }
 
 .photo-content {
-  margin-top: 146px;
   width: 100%;
 }
 
@@ -228,8 +234,7 @@ main {
   padding-right: 0;
 }
 
-
-.copy {
+.copy_pc {
   display: block;
   color: #323232;
   text-align: center;
@@ -240,6 +245,9 @@ main {
   line-height: normal;
 }
 
+.copy_sp {
+  display: none;
+}
 
 /* hover op */
 .hover-op,

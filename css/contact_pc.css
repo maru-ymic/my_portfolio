@@ -40,6 +40,7 @@ main {
 }
 
 .wrapper {
+  position: relative;
   display: block;
 }
 
@@ -47,6 +48,7 @@ main {
   width: 1300px;
   margin-inline: auto;
 }
+
 
 /* ヘッダー
 --------------------------------------- */
@@ -114,15 +116,18 @@ main {
 
 /* contact
 --------------------------------------- */
+#container {
+  padding-top: 146px;
+}
+
 #contact-area {
-  width: 100%;
+  width: auto;
 }
 
 .contact-content {
   display: block;
   width: auto;
   background-color: #e6eff1;
-  margin-top: 146px;
   padding-bottom: 100px;
 }
 
@@ -143,8 +148,9 @@ main {
   text-align: center;
 }
 
-.sp_ver {
-  display: none;
+iframe {
+  width: 800px;
+  height: 900px;
 }
 
 /* footer
@@ -187,7 +193,7 @@ main {
   padding-right: 0;
 }
 
-.copy {
+.copy_pc {
   display: block;
   color: #323232;
   text-align: center;
@@ -231,4 +237,3 @@ main {
 .hover-ops:hover::after {
   transform: scale(1, 1);
 }
-

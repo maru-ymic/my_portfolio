@@ -65,15 +65,14 @@ main {
   width: auto;
   z-index: 1000;
   padding: calc( ( 100 / 750 ) * 30 * 1vw) calc( ( 100 / 750 ) * 44 * 1vw);
-  top: 0;
   position: fixed;
   left: 0;
   right: 0;
+  transition: all 0.3s linear 150ms;
 }
 
 .header.change-color {
-  background-color: #D9D9D9;
-  transition: 0.3s;
+  background-color: #f9f9f1cc;
 }
 
 .header_inner {
@@ -89,6 +88,14 @@ main {
   background: transparent;
   z-index: 9999;
   position: relative;
+}
+
+.header {
+  top: -24vw;
+}
+
+body.touch-menu-on .header {
+  top: 0vw;
 }
 
 /* pc nav */
@@ -183,13 +190,6 @@ main {
   opacity: 1;
 }
 
-/* .header__nav-area nav ul {
-  overflow: auto;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-  box-sizing: border-box;
-} */
-
 .global-navigation {
   position: fixed;
   z-index: 9998;
@@ -199,11 +199,6 @@ main {
   padding: calc( ( 100 / 750 ) * 169 * 1vw) calc( ( 100 / 750 ) * 60 * 1vw);
   transition: all 0.6s;
 }
-
-/* .global-navigation.panelactive {
-  top: 0;
-} */
-  
 
 .global-navigation__list {
   position: fixed;
@@ -243,7 +238,6 @@ main {
   margin-top: calc( ( 100 / 750 ) * 300 * 1vw);
   width: 100%;
   background-color: #e6eff1;
-  /* margin-top: 146px; */
   padding-bottom: calc( ( 100 / 750 ) * 200 * 1vw);
 }
 
@@ -263,16 +257,12 @@ main {
 .contact-form {
   position: relative;
   width: 100%;
-  min-height: 130vh;
+  min-height: 160vh;
   overflow-y: scroll;
   padding-top: 100%;
 }
 
-.pc_ver {
-  display: none;
-}
-
-.sp_ver {
+iframe {
   position: absolute;
   top: 0;
   left: 0;

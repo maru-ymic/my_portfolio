@@ -58,6 +58,7 @@ main {
   box-sizing: border-box;
 }
 
+
 /* ヘッダー
 --------------------------------------- */
 .header {
@@ -69,11 +70,11 @@ main {
   position: fixed;
   left: 0;
   right: 0;
+  transition: all 0.3s linear 150ms;
 }
 
 .header.change-color {
-  background-color: #D9D9D9;
-  transition: 0.3s;
+  background-color: #f9f9f1cc;
 }
 
 .header_inner {
@@ -89,6 +90,14 @@ main {
   background: transparent;
   z-index: 9999;
   position: relative;
+}
+
+.header {
+  top: -24vw;
+}
+
+body.touch-menu-on .header {
+  top: 0vw;
 }
 
 /* pc nav */
@@ -183,13 +192,6 @@ main {
   opacity: 1;
 }
 
-/* .header__nav-area nav ul {
-  overflow: auto;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-  box-sizing: border-box;
-} */
-
 .global-navigation {
   position: fixed;
   z-index: 9998;
@@ -199,11 +201,6 @@ main {
   padding: calc( ( 100 / 750 ) * 169 * 1vw) calc( ( 100 / 750 ) * 60 * 1vw);
   transition: all 0.6s;
 }
-
-/* .global-navigation.panelactive {
-  top: 0;
-} */
-  
 
 .global-navigation__list {
   position: fixed;
@@ -269,7 +266,6 @@ main {
   padding-top: calc( ( 100 / 750 ) * 100 * 1vw);
   padding-left: calc( ( 100 / 750 ) * 45 * 1vw);
   padding-right: calc( ( 100 / 750 ) * 43 * 1vw);
-  /* padding: 70px 120px 0; */
 }
 
 .photo-column {
