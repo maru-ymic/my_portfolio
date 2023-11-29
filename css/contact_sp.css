@@ -291,11 +291,7 @@ iframe {
   display: none;
 }
 
-.copy_pc {
-  display: none;
-}
-
-.copy_sp {
+.copy {
   display: block;
   color: #323232;
   text-align: center;
