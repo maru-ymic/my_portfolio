@@ -68,13 +68,13 @@ main {
   position: fixed;
   left: 0;
   right: 0;
+  transition: all 0.3s linear 150ms;
   background-color: #f9f9f1cc;
-/*   transition: all 0.3s linear 150ms; */
 }
 
-/* .header.change-color {
+.header.change-color {
   background-color: #f9f9f1cc;
-} */
+}
 
 .header_inner {
   display: block;
@@ -239,7 +239,6 @@ body.touch-menu-on .header {
   margin-top: calc( ( 100 / 750 ) * 300 * 1vw);
   width: 100%;
   background-color: #e6eff1;
-  padding-bottom: calc( ( 100 / 750 ) * 80 * 1vw);
 }
 
 .contact-content h2 {
@@ -261,7 +260,7 @@ body.touch-menu-on .header {
   min-height: 145vh;
   overflow-y: scroll;
   padding-top: 100%;
-/*   padding-bottom: calc( ( 100 / 750 ) * 100 * 1vw); */
+  /* padding-bottom: calc( ( 100 / 750 ) * 80 * 1vw); */
 }
 
 iframe {
