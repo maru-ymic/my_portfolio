@@ -477,7 +477,7 @@ main {
   padding-right: 0;
 }
 
-.copy_pc {
+.copy {
   display: block;
   color: #323232;
   text-align: center;
@@ -486,10 +486,6 @@ main {
   font-style: normal;
   font-weight: normal;
   line-height: normal;
-}
-
-.copy_sp {
-  display: none;
 }
 
 /* hover op */
