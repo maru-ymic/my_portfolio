@@ -193,7 +193,7 @@ iframe {
   padding-right: 0;
 }
 
-.copy_pc {
+.copy {
   display: block;
   color: #323232;
   text-align: center;
@@ -202,10 +202,6 @@ iframe {
   font-style: normal;
   font-weight: normal;
   line-height: normal;
-}
-
-.copy_sp {
-  display: none;
 }
 
 /* hover op */
