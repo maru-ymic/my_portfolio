@@ -505,14 +505,16 @@ body.touch-menu-on .header {
 }
 
 .skill-cnt img {
-  width: calc( ( 100 / 750 ) * 150 * 1vw);
-  height: auto;
+  width: calc( ( 100 / 750 ) * 200 * 1vw);
+  height: calc( ( 100 / 750 ) * 200 * 1vw);
+  object-fit: cover;
+  margin: auto 0;
 }
 
 .skill-content-wrapper {
   display: flex;
   flex-direction: column;
-  gap: calc( ( 100 / 750 ) * 40 * 1vw);
+  gap: calc( ( 100 / 750 ) * 30 * 1vw);
 }
 
 .skill-content-wrapper h3,
