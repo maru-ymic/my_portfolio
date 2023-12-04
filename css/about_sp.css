@@ -505,8 +505,8 @@ body.touch-menu-on .header {
 }
 
 .skill-cnt img {
-  width: calc( ( 100 / 750 ) * 150 * 1vw);
-  height: calc( ( 100 / 750 ) * 150 * 1vw);
+  width: calc( ( 100 / 750 ) * 180 * 1vw);
+  height: calc( ( 100 / 750 ) * 180 * 1vw);
   object-fit: cover;
   margin: auto 0;
 }
