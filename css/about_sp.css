@@ -405,7 +405,6 @@ body.touch-menu-on .header {
 .career-content_left {
   display: block;
   width: 100%;
-  /* height: ; */
   aspect-ratio: 1 / 1;
   background: url("../images/career_works/career_road.png");
   background-repeat: no-repeat;
@@ -510,10 +509,11 @@ body.touch-menu-on .header {
   height: auto;
 }
 
-.skill-content-wrapper h3 {
-  padding: 0 0 calc( ( 100 / 750 ) * 20 * 1vw) 0;
+.skill-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: calc( ( 100 / 750 ) * 40 * 1vw);
 }
-
 
 .skill-content-wrapper h3,
 .skill-content-wrapper .level {
@@ -526,14 +526,12 @@ body.touch-menu-on .header {
 }
 
 .skill-content-wrapper .txt {
-  height: 90px;
   color: #323232;
   font-family: Zen Maru Gothic;
   font-size: calc( ( 100 / 750 ) * 26 * 1vw);
   font-style: normal;
   font-weight: normal;
   line-height: normal;
-  padding-bottom: calc( ( 100 / 750 ) * 30 * 1vw);
 }
 
 
